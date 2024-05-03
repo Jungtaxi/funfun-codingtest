@@ -29,7 +29,7 @@ def bfs(size, start):
         if visited[x][y] - 1 > res_time:
             continue
 
-        # 물고기를 먹으면 time과 좌표 출력
+        # 물고기를 먹으면 좌표 기록
         if graph[x][y] and graph[x][y] < size:
             # 물고기와의 최단 거리 업데이트
             res_time = visited[x][y] - 1
@@ -71,7 +71,7 @@ for i in range(n):
     if start:
         break
 
-# 거리가 가깝다면 위 -> 왼 순으로 먹음
+# 방향
 direct = [(-1, 0), (0, -1), (0, 1), (1, 0)]
 
 ans = 0
